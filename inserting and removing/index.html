@@ -6,8 +6,20 @@
     <title>Document</title>
 </head>
 <body>
+    
     <div class="container">
-        <div class="box">This is functional Best </div>
+        <div class="this is the "></div>
+        <div class="box"style="">This is functional Best </div>
     </div>
+    <script>
+        let div = document.createElement("div");
+        div.innerHTML= "I am functional"
+        div.setAttribute("class","created");
+        document.querySelector(".container").append(div);
+        div.insertAdjacentHTML("beforebegin","i am not a functional but i am working on it ")
+        // document.querySelector(".container").classList
+        document.querySelector(".container").classList.add("not");
+
+    </script>
 </body>
 </html>
