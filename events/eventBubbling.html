@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child{
+            /* background-color: yellow; */
+            margin: 32px;
+            padding:32px;
+            cursor: pointer;
+            border:  2px solid black;
+        }
+        .childContainer{
+            /* background-color: rgb(182, 165, 163); */
+            margin: 32px;
+            padding:32px;
+            
+        }
+        .childContainer{
+            /* background-color: rgb(233, 191, 186); */
+            margin: 32px;
+            padding:32px;
+            
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="countainer">
+        <section class="childContainer">
+            <div class="child">
+                I am a Child
+            </div>
+        </section>
+    </div>
+
+    <script>
+        
+
+
+        
+
+document.querySelector(".child").addEventListener("dblclick",(e)=>{
+     
+   alert("Child was clicked")
+})
+document.querySelector(".childContainer").addEventListener("dblclick",(e)=>{
+   e.stopPropogation(e)
+    alert("childContainer was clicked")
+})
+document.querySelector(".Container").addEventListener("dblclick",(e)=>{
+   e.stopPropogation(e)
+   alert("container was clicked")
+})
+
+
+setInterval(()=>{
+    function selector(a, element){
+    if(a<0.2){
+        element.style.backgroundColor ="green"
+    }
+    else if(a>0.2 && a<0.4){
+        element.style.backgroundColor ="black"
+    }
+    else if(a>0.4 && a<0.6){
+        element.style.backgroundColor ="blue"
+    }
+    else if(a>0.6 && a<0.8){
+        element.style.backgroundColor ="grey"
+    }
+    else if(a>0.8 && a<1){
+        element.style.backgroundColor ="red"
+    }
+}
+document.querySelectorAll(".child").forEach(element => {
+    x = Math.random();
+    // 
+    selector(x,element)
+});
+   }, 1000)
+
+    </script>
+</body>
+</html>
