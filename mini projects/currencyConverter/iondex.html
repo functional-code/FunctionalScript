@@ -9,17 +9,32 @@
 <body>
 
 <div class="container">
-    <h2>Currency Converter</h2
+    <h2>Currency Converter</h2>
         <form>
             <div class="amount">
                 <p>Enter Amount</p>
                 <input value="100" type="text">
             
             </div>
-            <div class="droupdown">
-                <h2 class="from">from</h2>
-
-                <h2 class="to">to</h2>
+            <div class="select-container">
+                <img src="https://flagsapi.com/BE/flat/64.png">
+                <select name="form">
+                    <option value="USD">USD</option>
+                    <option value="IND">IND</option>
+                    <option value="EUR">EUR</option>
+                    <option value="AUD">AUD</option>
+                </select>
+                <p>To</p>
+            <div class="select-container">
+                <img src="https://flagsapi.com/BE/flat/64.png">
+                <select name="to">
+                    <option value="USD">USD</option>
+                    <option value="IND">IND</option>
+                    <option value="EUR">EUR</option>
+                    <option value="AUD">AUD</option>
+                </select>
+                <div class="msg"> 1 USD =80 INR</div>
+                <button>Get Exchange Rate</button>
             </div>
         </form>
         </div>
